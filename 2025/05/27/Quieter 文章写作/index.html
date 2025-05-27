@@ -490,7 +490,12 @@
 <p>​    在<strong>主题</strong>下的 <code>_config.yaml</code> 中配置：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># mermaid chart</span><br><span class="hljs-comment"># 可以配合（hexo-filter-mermaid-diagrams）</span><br><span class="hljs-attr">mermaid:</span> <span class="hljs-comment">## mermaid url https://github.com/knsv/mermaid</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>  <span class="hljs-comment"># default true</span><br>  <span class="hljs-attr">js:</span> <span class="hljs-string">https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js</span><br>  <span class="hljs-attr">options:</span> <span class="hljs-comment"># find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js</span><br>    <span class="hljs-comment">#startOnload: true  // default true</span><br></code></pre></td></tr></table></figure>
 <p>​    效果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs mermaid">graph TD;<br>    A--&gt;B;<br>    A--&gt;C;<br>    B--&gt;D;<br>    C--&gt;D;<br></code></pre></td></tr></table></figure>
+<pre class="mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;</pre>
+
 <h2 id="APlayer"><a href="#APlayer" class="headerlink" title="APlayer"></a>APlayer</h2><p>​    Quieter 适配并优化 <a target="_blank" rel="noopener" href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md">hexo-tag-aplayer</a> 插件，安装后请在<strong>项目根目录</strong>下的 <code>_config.yml</code> 将 aplayer 的预加载关闭：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 关闭 aplayer 预加载</span><br><span class="hljs-attr">aplayer:</span><br>    <span class="hljs-attr">asset_inject:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 <p>​    之后在需要使用 aplayer 的文章开头设置：</p>
@@ -499,12 +504,12 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% aplayer &quot;No Happy Endings&quot; &quot;Tangerine Dream&quot; &quot;/musics/No Happy Endings.mp3&quot; &quot;/musics/No Happy Endings.webp&quot; &quot;&quot; %&#125;<br></code></pre></td></tr></table></figure>
 <p>​    效果：</p>
 
-        <div id="aplayer-DhUZqkgW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-KIhdRAKe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-DhUZqkgW"),
+            element: document.getElementById("aplayer-KIhdRAKe"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -528,7 +533,7 @@
 <p>​    一个示例如下：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% AES 123456, &quot;密码是 123456&quot; %&#125;<br>这是加密的内容！<br>&#123;% endAES %&#125;<br></code></pre></td></tr></table></figure>
 <p>​    效果：</p>
-<script>new AESContainer(' 密码是 123456', 'U2FsdGVkX18vZRMMVi9I3qHXXu9orKCPIO1oL9eE/8whwafDjO0iyOouGUciluSJ9gFIJ0QTKHIyYx6ckqCzhPNOUaB29bEtzCd+PQB48Fo=').render();</script>
+<script>new AESContainer(' 密码是 123456', 'U2FsdGVkX1+60YHVIMBvgPKDWyc9i2TbWCqLnH9jiE+H/RF6xvGJA30q7m3ZQ54SrKwVGrBy/WfMXk2ahWxgEMoypRG9PE3QQ3KH5KR4Icc=').render();</script>
 <h3 id="hide"><a href="#hide" class="headerlink" title="hide"></a>hide</h3><p>​    搬运自 <a target="_blank" rel="noopener" href="https://butterfly.js.org/">Butterfly</a>。</p>
 <h4 id="hideInline"><a href="#hideInline" class="headerlink" title="hideInline"></a>hideInline</h4><p>​    语法：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% hideInline content,display,bg,color %&#125;<br></code></pre></td></tr></table></figure>
